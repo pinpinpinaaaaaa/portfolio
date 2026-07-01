@@ -2,8 +2,6 @@
 
 Website portofolio pribadi (Web Developer & Data Enthusiast) yang seluruh isinya digerakkan oleh satu file data (`data.js`) dan mendukung dua bahasa (Inggris/Indonesia).
 
-![Preview](assets/img/preview.jpg)
-
 ## Fitur
 
 - **Data-driven** - semua konten (profil, project, pengalaman, pendidikan, sertifikat, skill, kontak) diambil dari `data.js`, tanpa perlu menyentuh `index.html`.
