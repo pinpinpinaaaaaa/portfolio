@@ -127,8 +127,3 @@ Kalau salah satu platform belum punya akun/link, **hapus seluruh objeknya** (buk
 
 > Penting: nama file utama harus tetap `index.html` (huruf kecil semua) agar GitHub Pages mengenalinya sebagai halaman depan.
 
-## Kontak
-
-- Email: vinafaustina1011@gmail.com
-- LinkedIn: lihat bagian **Contact** di website (link diatur lewat `data.js`)
-- GitHub: lihat bagian **Contact** di website (link diatur lewat `data.js`)
