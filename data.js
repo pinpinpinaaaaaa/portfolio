@@ -130,7 +130,7 @@ const PORTFOLIO_DATA = {
 				'assets/img/kos-2.jpg',
 				'assets/img/kos-3.jpg',
 			],
-			year: '2025',
+			year: '2024',
 			github: '',
 		},
 		{
