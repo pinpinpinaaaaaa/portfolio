@@ -78,6 +78,9 @@
 				max-width: 100%;
 				display: block;
 			}
+			[hidden] {
+				display: none !important;
+			}
 			a {
 				color: inherit;
 				text-decoration: none;
@@ -479,48 +482,62 @@
 			.hero-visual {
 				margin-top: clamp(0px, 6vw, 56px);
 			}
-			.hero-visual-panel {
+			.hero-photo-stage {
 				position: relative;
-				background: var(--ink);
-				border-radius: var(--radius-lg);
-				aspect-ratio: 4 / 5;
-				overflow: hidden;
-				box-shadow: var(--shadow);
+				aspect-ratio: 3 / 4;
 				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
+				align-items: flex-end;
+				justify-content: center;
 			}
-			.hero-visual-panel::before {
+			.hero-photo-backdrop {
+				position: absolute;
+				top: 22%;
+				right: 4%;
+				width: 80%;
+				aspect-ratio: 1;
+				border-radius: 50%;
+				background: radial-gradient(circle at 34% 28%, var(--ink-2), var(--ink) 72%);
+				box-shadow: var(--shadow);
+			}
+			.hero-photo-backdrop::after {
 				content: '';
 				position: absolute;
-				inset: 0;
-				background:
-					radial-gradient(circle at 22% 20%, rgba(62, 99, 221, 0.35), transparent 44%),
-					linear-gradient(200deg, rgba(255, 255, 255, 0.05), transparent 55%);
+				inset: -13px;
+				border-radius: 50%;
+				border: 1.5px solid var(--accent);
+				opacity: 0.3;
+				mask-image: linear-gradient(115deg, #000 30%, transparent 60%);
+				-webkit-mask-image: linear-gradient(115deg, #000 30%, transparent 60%);
 			}
-			.hero-visual-panel::after {
-				content: '';
-				position: absolute;
-				inset: 0;
-				border-radius: inherit;
-				box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
-				pointer-events: none;
-			}
-			.hero-mono {
+			.hero-photo,
+			.hero-photo-fallback {
 				position: relative;
 				z-index: 1;
+				height: 96%;
+				width: auto;
+				max-width: 100%;
+				object-fit: contain;
+				object-position: bottom;
+				filter: drop-shadow(0 26px 28px rgba(22, 35, 63, 0.4)) drop-shadow(-2px -2px 0 rgba(255, 255, 255, 0.22));
+			}
+			.hero-photo-fallback {
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				width: 100%;
+			}
+			.hero-photo-fallback span {
 				font-family: var(--font-display);
 				font-weight: 600;
-				font-size: clamp(7rem, 20vw, 11rem);
-				line-height: 0.8;
+				font-size: clamp(6.5rem, 18vw, 10rem);
+				line-height: 0.75;
 				color: var(--panel);
-				padding: 34px 0 0 30px;
+				padding-bottom: 4%;
 			}
 			.hero-visual-foot {
-				position: relative;
-				z-index: 1;
-				padding: 22px 26px 26px;
-				border-top: 1px solid rgba(247, 243, 234, 0.16);
+				margin-top: 26px;
+				padding-top: 22px;
+				border-top: 1px solid var(--line);
 				display: flex;
 				flex-direction: column;
 				gap: 14px;
@@ -530,7 +547,7 @@
 				align-items: center;
 				gap: 9px;
 				font-size: 12.5px;
-				color: rgba(247, 243, 234, 0.65);
+				color: var(--muted);
 			}
 			.status-dot {
 				width: 7px;
@@ -541,10 +558,11 @@
 			}
 			.hero-availability {
 				font-size: 13.5px;
-				color: var(--panel);
+				color: var(--ink-2);
 			}
 			.hero-availability strong {
 				font-weight: 600;
+				color: var(--ink);
 			}
 			.hero-badges {
 				display: flex;
@@ -557,8 +575,8 @@
 				align-items: center;
 				gap: 6px;
 				font-size: 11.5px;
-				color: rgba(247, 243, 234, 0.85);
-				border: 1px solid rgba(247, 243, 234, 0.18);
+				color: var(--ink-2);
+				border: 1px solid var(--line);
 				padding: 6px 11px;
 				border-radius: var(--radius-pill);
 			}
@@ -1251,9 +1269,13 @@
 				.skills-grid {
 					grid-template-columns: 1fr;
 				}
+				.hero-copy {
+					order: 2;
+				}
 				.hero-visual {
-					margin-top: 0;
-					max-width: 320px;
+					order: 1;
+					margin: 0 auto 36px;
+					max-width: 280px;
 				}
 				.work-panel,
 				.work-panel:nth-of-type(even) {
@@ -1288,6 +1310,9 @@
 				.contact-icon {
 					width: 40px;
 					height: 40px;
+				}
+				.hero-visual {
+					max-width: 220px;
 				}
 			}
 		</style>
@@ -1390,19 +1415,23 @@
 						</div>
 					</div>
 					<div class="hero-visual">
-						<div class="hero-visual-panel">
-							<div class="hero-mono" id="heroMono">D</div>
-							<div class="hero-visual-foot">
-								<div class="hero-status">
-									<span class="status-dot" aria-hidden="true"></span>
-									<span data-i18n="hero.online">Online</span>
-								</div>
-								<p class="hero-availability">
-									<span data-i18n="hero.currently">Currently</span>
-									<strong data-i18n="hero.status">Open to Work</strong>
-								</p>
-								<div class="hero-badges" id="heroBadges"></div>
+						<div class="hero-photo-stage">
+							<div class="hero-photo-backdrop" aria-hidden="true"></div>
+							<img class="hero-photo" id="heroPhoto" src="" alt="" loading="eager" hidden />
+							<div class="hero-photo-fallback" id="heroPhotoFallback">
+								<span id="heroMono">D</span>
 							</div>
+						</div>
+						<div class="hero-visual-foot">
+							<div class="hero-status">
+								<span class="status-dot" aria-hidden="true"></span>
+								<span data-i18n="hero.online">Online</span>
+							</div>
+							<p class="hero-availability">
+								<span data-i18n="hero.currently">Currently</span>
+								<strong data-i18n="hero.status">Open to Work</strong>
+							</p>
+							<div class="hero-badges" id="heroBadges"></div>
 						</div>
 					</div>
 				</div>
@@ -1596,6 +1625,21 @@
 				if ($('heroName') && D.profile.name) $('heroName').textContent = D.profile.name;
 				if ($('heroMono') && D.profile.name)
 					$('heroMono').textContent = D.profile.name.charAt(0).toUpperCase();
+
+				const heroPhotoEl = $('heroPhoto');
+				const heroPhotoFallbackEl = $('heroPhotoFallback');
+				if (heroPhotoEl && D.profile.photo) {
+					heroPhotoEl.addEventListener('load', () => {
+						heroPhotoEl.hidden = false;
+						if (heroPhotoFallbackEl) heroPhotoFallbackEl.hidden = true;
+					});
+					heroPhotoEl.addEventListener('error', () => {
+						heroPhotoEl.hidden = true;
+						if (heroPhotoFallbackEl) heroPhotoFallbackEl.hidden = false;
+					});
+					heroPhotoEl.alt = D.profile.name || '';
+					heroPhotoEl.src = D.profile.photo;
+				}
 
 				let workIo = null;
 				function observeWorkPanels() {
