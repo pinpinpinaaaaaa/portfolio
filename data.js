@@ -190,9 +190,9 @@ const PORTFOLIO_DATA = {
 					'Update konten tanpa perlu koding',
 				],
 			},
-			stack: ['WordPress', 'Elementor', 'HTML', 'CSS', 'PHP'],
+			stack: ['WordPress', 'Elementor', 'HTML', 'CSS'],
 			images: ['assets/img/redesign-1.jpg', 'assets/img/redesign-2.jpg'],
-			year: '2025',
+			year: '2026',
 			github: '',
 		},
 		{
