@@ -263,7 +263,6 @@ const PORTFOLIO_DATA = {
 			year: '2026',
 			github: '',
 		},
-	],
 		{
 			title: 'Website Redesign & WordPress Migration',
 			category: 'web',
@@ -295,6 +294,8 @@ const PORTFOLIO_DATA = {
 			year: '2026',
 			github: '',
 		},
+	],
+		
 
 	certifications: [
 		{
