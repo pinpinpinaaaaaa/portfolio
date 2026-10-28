@@ -6,12 +6,16 @@ const PORTFOLIO_DATA = {
 		cvFile: 'CV_DevinaDewi.pdf',
 		photo: 'assets/img/devina.png',
 		aboutLead: {
-			en: "I'm a fresh Informatics Engineering graduate and Web Developer who loves building digital products from the ground up - from concept and system design to interfaces that feel effortless to use.",
-			id: 'Saya lulusan Teknik Informatika sekaligus Web Developer yang menyukai proses membangun produk digital dari nol - mulai dari konsep, sistem, hingga tampilan yang nyaman digunakan.',
+			en: "I'm an Informatics Engineering graduate who enjoys working at the intersection of business and technology. I don't just build systems - I start by understanding the real problem: gathering requirements, mapping processes, and structuring data before designing a solution.",
+			id: 'Saya lulusan Teknik Informatika yang senang bekerja di persimpangan antara bisnis dan teknologi. Saya tidak sekadar membangun sistem - saya mulai dengan memahami masalah sebenarnya: menggali kebutuhan, memetakan proses, dan menata data sebelum merancang solusi.',
 		},
 		aboutText: {
-			en: "Beyond web development, I'm actively sharpening my Data Analytics skills - from SQL, Excel, and Power BI to the fundamentals of Machine Learning. This combination helps me understand products not just technically, but also through data and real user needs.",
-			id: 'Selain web development, saya aktif mendalami Data Analytics - mulai dari SQL, Excel, Power BI, hingga dasar Machine Learning. Kombinasi ini membantu saya memahami produk tidak hanya dari sisi teknis, tetapi juga dari sisi data dan kebutuhan pengguna.',
+			en: 'During my internship, I took a manual, fragmented process and turned it into a working digital system - owning everything from requirement analysis and database design to development and user validation. I hold a BNSP Data Analyst certification and work comfortably across data analysis, system design, and full-stack development.',
+			id: 'Selama magang, saya mengubah proses manual yang tersebar menjadi sistem digital yang berfungsi - menangani semuanya dari analisis kebutuhan dan desain database hingga pengembangan dan validasi pengguna. Saya memegang sertifikasi BNSP Data Analyst dan terbiasa bekerja lintas bidang: analisis data, desain sistem, dan pengembangan full-stack.',
+		},
+		aboutClosing: {
+			en: "I'm detail-oriented, a fast learner, and I care about solutions that actually fit what people need.",
+			id: 'Saya teliti, cepat belajar, dan peduli dengan solusi yang benar-benar sesuai kebutuhan pengguna.',
 		},
 		roles: {
 			en: [
@@ -75,7 +79,7 @@ const PORTFOLIO_DATA = {
 
 	experience: [
 		{
-			year: 'Sep 2025 - Sep 2026',
+			year: 'Sep 2025 - Sekarang',
 			type: { en: 'Internship', id: 'Magang' },
 			title: 'IT Intern',
 			org: 'Lembaga Management FEB UI',
@@ -166,6 +170,37 @@ const PORTFOLIO_DATA = {
 			github: '',
 		},
 		{
+			title: 'Website Redesign & WordPress Migration',
+			category: 'web',
+			tag: { en: 'Redesign & Migration', id: 'Redesign & Migrasi' },
+			desc: {
+				en: 'Redesigned and rebuilt a client website, migrating it from hand-coded pages to a maintainable WordPress site.',
+				id: 'Meredesain dan membangun ulang website klien, memigrasikan dari halaman hand-code ke WordPress yang mudah dirawat.',
+			},
+			detail: {
+				en: 'Audited an existing hand-coded client website, then redesigned the UI/UX in Figma to modernize the layout and improve usability. The site was rebuilt on WordPress using Elementor, with all content and page structure migrated over while keeping the new design responsive across devices. The result is a site the client\'s non-technical team can update on their own without touching code.',
+				id: 'Melakukan audit terhadap website klien yang sebelumnya dibangun secara hand-code, kemudian meredesain UI/UX di Figma untuk memperbarui tampilan dan meningkatkan kenyamanan penggunaan. Website dibangun ulang di WordPress menggunakan Elementor, dengan seluruh konten dan struktur halaman dimigrasikan sambil memastikan desain baru tetap responsif di berbagai perangkat. Hasilnya adalah website yang bisa diperbarui sendiri oleh tim non-teknis klien tanpa perlu koding.',
+			},
+			highlights: {
+				en: [
+					'Migrated a custom-coded website to WordPress',
+					'Rebuilt the UI from Figma designs with Elementor',
+					'Improved responsiveness and page structure',
+					'Enabled content updates without coding',
+				],
+				id: [
+					'Migrasi website hand-code ke WordPress',
+					'Bangun ulang UI dari desain Figma via Elementor',
+					'Tingkatkan responsivitas & struktur halaman',
+					'Update konten tanpa perlu koding',
+				],
+			},
+			stack: ['WordPress', 'Elementor', 'HTML', 'CSS', 'PHP'],
+			images: ['assets/img/redesign-1.jpg', 'assets/img/redesign-2.jpg'],
+			year: '2025',
+			github: '',
+		},
+		{
 			title: 'WebJadiin',
 			category: 'web',
 			tag: { en: 'Service Platform', id: 'Platform Jasa' },
@@ -200,7 +235,7 @@ const PORTFOLIO_DATA = {
 		},
 		{
 			title: 'Asset Management System',
-			category: 'web',
+			category: 'system',
 			tag: { en: 'Information System', id: 'Sistem Informasi' },
 			desc: {
 				en: 'A digital asset & inventory management system that improves the efficiency of asset tracking and monitoring.',
@@ -264,38 +299,6 @@ const PORTFOLIO_DATA = {
 			year: '2026',
 			github: '',
 		},
-		
-		{
-			title: 'Website Redesign & WordPress Migration',
-			category: 'web',
-			tag: { en: 'Redesign & Migration', id: 'Redesign & Migrasi' },
-			desc: {
-				en: 'Redesigned and rebuilt a client website, migrating it from hand-coded pages to a maintainable WordPress site.',
-				id: 'Meredesain dan membangun ulang website klien, memigrasikan dari halaman hand-code ke WordPress yang mudah dirawat.',
-			},
-			detail: {
-				en: 'Audited an existing hand-coded client website, then redesigned the UI/UX in Figma to modernize the layout and improve usability. The site was rebuilt on WordPress using Elementor, with all content and page structure migrated over while keeping the new design responsive across devices. The result is a site the client\'s non-technical team can update on their own without touching code.',
-				id: 'Melakukan audit terhadap website klien yang sebelumnya dibangun secara hand-code, kemudian meredesain UI/UX di Figma untuk memperbarui tampilan dan meningkatkan kenyamanan penggunaan. Website dibangun ulang di WordPress menggunakan Elementor, dengan seluruh konten dan struktur halaman dimigrasikan sambil memastikan desain baru tetap responsif di berbagai perangkat. Hasilnya adalah website yang bisa diperbarui sendiri oleh tim non-teknis klien tanpa perlu koding.',
-			},
-			highlights: {
-				en: [
-					'Migrated a custom-coded website to WordPress',
-					'Rebuilt the UI from Figma designs with Elementor',
-					'Improved responsiveness and page structure',
-					'Enabled content updates without coding',
-				],
-				id: [
-					'Migrasi website hand-code ke WordPress',
-					'Bangun ulang UI dari desain Figma via Elementor',
-					'Tingkatkan responsivitas & struktur halaman',
-					'Update konten tanpa perlu koding',
-				],
-			},
-			stack: ['WordPress', 'Elementor', 'HTML', 'CSS', 'PHP'],
-			images: ['assets/img/redesign-1.jpg', 'assets/img/redesign-2.jpg'],
-			year: '2025',
-			github: '',
-		},
 	],
 
 	certifications: [
@@ -347,9 +350,9 @@ const I18N = {
 	en: {
 		loader: 'Loading Portfolio',
 		meta: {
-			title: 'Portfolio - Web Developer & Data Enthusiast',
+			title: 'Devina Dewi - Business & Technology | Systems, Data & Development',
 			description:
-				'Personal portfolio - Web Developer & Full-Stack Engineer with an interest in data analytics. Showcasing web development projects, data work, and professional certifications.',
+				'Informatics Engineering graduate bridging business, data, and technology. Experienced in requirement analysis, system design, data structuring, and full-stack development.',
 		},
 		nav: {
 			home: 'Home',
@@ -366,7 +369,7 @@ const I18N = {
 			greeting: "Hello, I'm",
 			roleIntro: 'a',
 			subtitle:
-				"I'm a Web Developer focused on building digital products - websites, dashboards, and information systems that are clean, fast, and functional. I'm currently deepening my skills in data analytics & visualization to build smarter products.",
+				'I bridge business needs and technology - analyzing requirements, designing systems, and building solutions end-to-end. From mapping business processes and structuring data to full-stack development, I turn problems into working products that people actually use.',
 			ctaProjects: 'View Projects',
 			ctaCv: 'Download CV',
 			metaProject: 'Projects',
@@ -382,7 +385,7 @@ const I18N = {
 		about: {
 			eyebrow: '01 - About',
 			titleHtml:
-				'Focused on <em>web engineering</em>,<br />curious about <em>data</em>.',
+				'Analyzing <em>business needs</em>,<br />designing <em>systems</em>, building <em>solutions</em>.',
 			statSkill: 'Skills',
 		},
 		skills: {
@@ -393,8 +396,9 @@ const I18N = {
 			eyebrow: '03 - Projects',
 			titleHtml: 'Selected <em>work</em>.',
 			filterAll: 'All',
-			filterWeb: 'Web Dev',
-			filterData: 'Data',
+			filterSystem: 'System Design',
+			filterData: 'Data & Analytics',
+			filterWeb: 'Web Development',
 			viewDetails: 'View Details',
 		},
 		certifications: {
@@ -412,7 +416,7 @@ const I18N = {
 		contact: {
 			eyebrow: '06 - Contact',
 			titleHtml: "Let's build something <em>meaningful</em>.",
-			lead: "Feel free to reach out by email or through the social channels below - I'm happy to talk about collaboration, freelance work, or full-time opportunities in web development & engineering.",
+			lead: "Feel free to reach out by email or through the channels below. I'm happy to talk about internships, full-time opportunities, or collaboration in systems, data, and technology.",
 		},
 		footer: {
 			tagline: 'Crafted with care.',
@@ -429,9 +433,9 @@ const I18N = {
 	id: {
 		loader: 'Memuat Portofolio',
 		meta: {
-			title: 'Portofolio - Web Developer & Data Enthusiast',
+			title: 'Devina Dewi - Business & Technology | Systems, Data & Development',
 			description:
-				'Portofolio pribadi - Web Developer & Full-Stack Engineer dengan ketertarikan di data analytics. Menampilkan project web development, project data, dan sertifikasi profesional.',
+				'Lulusan Teknik Informatika yang menjembatani bisnis, data, dan teknologi. Berpengalaman dalam analisis kebutuhan, desain sistem, penataan data, dan pengembangan full-stack.',
 		},
 		nav: {
 			home: 'Beranda',
@@ -448,7 +452,7 @@ const I18N = {
 			greeting: 'Halo, saya',
 			roleIntro: 'seorang',
 			subtitle:
-				'Saya adalah seorang Web Developer yang fokus membangun produk digital - website, dashboard, dan sistem informasi yang clean, cepat, dan fungsional. Saat ini sedang aktif mempelajari data analytics & visualization sebagai skill pendukung untuk membuat produk yang lebih cerdas.',
+				'Saya menjembatani kebutuhan bisnis dan teknologi - menganalisis kebutuhan, merancang sistem, dan membangun solusi secara menyeluruh. Mulai dari memetakan proses bisnis dan menata data hingga pengembangan full-stack, saya mengubah masalah menjadi produk yang benar-benar digunakan.',
 			ctaProjects: 'Lihat Project',
 			ctaCv: 'Unduh CV',
 			metaProject: 'Project',
@@ -464,7 +468,7 @@ const I18N = {
 		about: {
 			eyebrow: '01 - Tentang',
 			titleHtml:
-				'Fokus pada <em>rekayasa web</em>,<br />penasaran dengan <em>data</em>.',
+				'Menganalisis <em>kebutuhan bisnis</em>,<br />merancang <em>sistem</em>, membangun <em>solusi</em>.',
 			statSkill: 'Skill',
 		},
 		skills: {
@@ -475,8 +479,9 @@ const I18N = {
 			eyebrow: '03 - Project',
 			titleHtml: 'Karya <em>pilihan</em>.',
 			filterAll: 'Semua',
-			filterWeb: 'Web Dev',
-			filterData: 'Data',
+			filterSystem: 'Desain Sistem',
+			filterData: 'Data & Analitik',
+			filterWeb: 'Pengembangan Web',
 			viewDetails: 'Lihat Detail',
 		},
 		certifications: {
@@ -494,7 +499,7 @@ const I18N = {
 		contact: {
 			eyebrow: '06 - Kontak',
 			titleHtml: 'Mari membangun sesuatu yang <em>bermakna</em>.',
-			lead: 'Jangan ragu menghubungi saya lewat email atau media sosial di bawah ini - saya senang membahas kolaborasi, freelance, atau full-time opportunity di bidang web development & engineering.',
+			lead: 'Jangan ragu menghubungi saya lewat email atau kanal di bawah. Saya senang berdiskusi tentang magang, peluang kerja penuh waktu, atau kolaborasi di bidang sistem, data, dan teknologi.',
 		},
 		footer: {
 			tagline: 'Dibuat dengan sepenuh hati.',
