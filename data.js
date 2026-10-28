@@ -79,7 +79,7 @@ const PORTFOLIO_DATA = {
 
 	experience: [
 		{
-			year: 'Sep 2025 - Sekarang',
+			year: 'Sep 2025 - Sep 2026',
 			type: { en: 'Internship', id: 'Magang' },
 			title: 'IT Intern',
 			org: 'Lembaga Management FEB UI',
