@@ -6,12 +6,12 @@ const PORTFOLIO_DATA = {
 		cvFile: 'CV_DevinaDewi.pdf',
 		photo: 'assets/img/devina.png',
 		aboutLead: {
-			en: "I'm an Informatics Engineering graduate who enjoys working at the intersection of business and technology. I don't just build systems - I start by understanding the real problem: gathering requirements, mapping processes, and structuring data before designing a solution.",
-			id: 'Saya lulusan Teknik Informatika yang senang bekerja di persimpangan antara bisnis dan teknologi. Saya tidak sekadar membangun sistem - saya mulai dengan memahami masalah sebenarnya: menggali kebutuhan, memetakan proses, dan menata data sebelum merancang solusi.',
+			en: "I'm an Informatics Engineering graduate who enjoys working at the intersection of business and technology. I don't just build systems — I start by understanding the real problem: gathering requirements, mapping processes, and structuring data before designing a solution.",
+			id: 'Saya lulusan Teknik Informatika yang senang bekerja di persimpangan antara bisnis dan teknologi. Saya tidak sekadar membangun sistem — saya mulai dengan memahami masalah sebenarnya: menggali kebutuhan, memetakan proses, dan menata data sebelum merancang solusi.',
 		},
 		aboutText: {
-			en: 'During my internship, I took a manual, fragmented process and turned it into a working digital system - owning everything from requirement analysis and database design to development and user validation. I hold a BNSP Data Analyst certification and work comfortably across data analysis, system design, and full-stack development.',
-			id: 'Selama magang, saya mengubah proses manual yang tersebar menjadi sistem digital yang berfungsi - menangani semuanya dari analisis kebutuhan dan desain database hingga pengembangan dan validasi pengguna. Saya memegang sertifikasi BNSP Data Analyst dan terbiasa bekerja lintas bidang: analisis data, desain sistem, dan pengembangan full-stack.',
+			en: 'During my internship, I took a manual, fragmented process and turned it into a working digital system — owning everything from requirement analysis and database design to development and user validation. I hold a BNSP Data Analyst certification and work comfortably across data analysis, system design, and full-stack development.',
+			id: 'Selama magang, saya mengubah proses manual yang tersebar menjadi sistem digital yang berfungsi — menangani semuanya dari analisis kebutuhan dan desain database hingga pengembangan dan validasi pengguna. Saya memegang sertifikasi BNSP Data Analyst dan terbiasa bekerja lintas bidang: analisis data, desain sistem, dan pengembangan full-stack.',
 		},
 		aboutClosing: {
 			en: "I'm detail-oriented, a fast learner, and I care about solutions that actually fit what people need.",
@@ -19,31 +19,31 @@ const PORTFOLIO_DATA = {
 		},
 		roles: {
 			en: [
-				'Web Developer',
-				'Full-Stack Developer',
+				'System Analyst',
 				'Data Analyst',
-				'Machine Learning Enthusiast',
+				'Full-Stack Developer',
+				'Business Analyst',
 			],
 			id: [
-				'Pengembang Web',
-				'Pengembang Full-Stack',
+				'Analis Sistem',
 				'Analis Data',
-				'Peminat Machine Learning',
+				'Pengembang Full-Stack',
+				'Analis Bisnis',
 			],
 		},
 		tags: {
 			en: [
-				'Web Development',
-				'Full-Stack',
-				'Data Analytics',
-				'Machine Learning',
+				'System Analyst',
+				'Data Analyst',
+				'Full-Stack Developer',
+				'Business Analyst',
 				'UI/UX',
 			],
 			id: [
-				'Pengembangan Web',
-				'Full-Stack',
-				'Analitik Data',
-				'Machine Learning',
+				'Analis Sistem',
+				'Analis Data',
+				'Pengembang Full-Stack',
+				'Analis Bisnis',
 				'UI/UX',
 			],
 		},
@@ -79,7 +79,7 @@ const PORTFOLIO_DATA = {
 
 	experience: [
 		{
-			year: 'Sep 2025 - Sep 2026',
+			year: 'Sep 2025 - Sekarang',
 			type: { en: 'Internship', id: 'Magang' },
 			title: 'IT Intern',
 			org: 'Lembaga Management FEB UI',
@@ -324,7 +324,7 @@ const PORTFOLIO_DATA = {
 
 	skills: {
 		webTitle: { en: 'Web Development', id: 'Web Development' },
-		webNote: { en: 'Primary focus', id: 'Fokus utama' },
+		webNote: { en: 'Core strength', id: 'Keahlian utama' },
 		web: [
 			{ name: 'HTML & CSS', level: 90 },
 			{ name: 'WordPress', level: 85 },
@@ -334,7 +334,7 @@ const PORTFOLIO_DATA = {
 			{ name: 'Flask', level: 70 },
 		],
 		dataTitle: { en: 'Data & Analytics', id: 'Data & Analytics' },
-		dataNote: { en: 'Currently learning', id: 'Sedang didalami' },
+		dataNote: { en: 'Proficient', id: 'Mahir' },
 		data: [
 			{ name: 'Microsoft Excel', level: 85 },
 			{ name: 'SQL', level: 80 },
@@ -343,6 +343,16 @@ const PORTFOLIO_DATA = {
 			{ name: 'Python', level: 70 },
 			{ name: 'Machine Learning', level: 60 },
 		],
+		systemTitle: { en: 'System Analysis & Design', id: 'Analisis & Desain Sistem' },
+		systemNote: { en: 'Proficient', id: 'Mahir' },
+		system: [
+			{ name: 'Requirement Gathering', level: 85 },
+			{ name: 'Business Process Mapping', level: 80 },
+			{ name: 'Database Design (ERD)', level: 85 },
+			{ name: 'System Documentation', level: 80 },
+			{ name: 'Flowcharting (Draw.io)', level: 85 },
+			{ name: 'SDLC / Agile', level: 75 },
+		],
 	},
 };
 
@@ -350,7 +360,7 @@ const I18N = {
 	en: {
 		loader: 'Loading Portfolio',
 		meta: {
-			title: 'Devina Dewi - Business & Technology | Systems, Data & Development',
+			title: 'Devina Dewi — Business & Technology | Systems, Data & Development',
 			description:
 				'Informatics Engineering graduate bridging business, data, and technology. Experienced in requirement analysis, system design, data structuring, and full-stack development.',
 		},
@@ -369,15 +379,15 @@ const I18N = {
 			greeting: "Hello, I'm",
 			roleIntro: 'a',
 			subtitle:
-				'I bridge business needs and technology - analyzing requirements, designing systems, and building solutions end-to-end. From mapping business processes and structuring data to full-stack development, I turn problems into working products that people actually use.',
+				'I bridge business needs and technology — analyzing requirements, designing systems, and building solutions end-to-end. From mapping business processes and structuring data to full-stack development, I turn problems into working products that people actually use.',
 			ctaProjects: 'View Projects',
 			ctaCv: 'Download CV',
 			metaProject: 'Projects',
 			metaExperience: 'Experience',
 			metaCertificate: 'Certificates',
-			badgeWeb: 'Web Developer',
-			badgeData: 'Data Enthusiast',
-			badgeFullstack: 'Full Stack',
+			badgeSystem: 'System Analyst',
+			badgeData: 'Data Analyst',
+			badgeFullstack: 'Full-Stack Developer',
 			currently: 'Currently',
 			status: 'Open to Work',
 			online: 'Online',
@@ -416,7 +426,7 @@ const I18N = {
 		contact: {
 			eyebrow: '06 - Contact',
 			titleHtml: "Let's build something <em>meaningful</em>.",
-			lead: "Feel free to reach out by email or through the channels below. I'm happy to talk about internships, full-time opportunities, or collaboration in systems, data, and technology.",
+			lead: "Feel free to reach out by email or through the channels below — I'm happy to talk about internships, full-time opportunities, or collaboration in systems, data, and technology.",
 		},
 		footer: {
 			tagline: 'Crafted with care.',
@@ -433,7 +443,7 @@ const I18N = {
 	id: {
 		loader: 'Memuat Portofolio',
 		meta: {
-			title: 'Devina Dewi - Business & Technology | Systems, Data & Development',
+			title: 'Devina Dewi — Business & Technology | Systems, Data & Development',
 			description:
 				'Lulusan Teknik Informatika yang menjembatani bisnis, data, dan teknologi. Berpengalaman dalam analisis kebutuhan, desain sistem, penataan data, dan pengembangan full-stack.',
 		},
@@ -452,15 +462,15 @@ const I18N = {
 			greeting: 'Halo, saya',
 			roleIntro: 'seorang',
 			subtitle:
-				'Saya menjembatani kebutuhan bisnis dan teknologi - menganalisis kebutuhan, merancang sistem, dan membangun solusi secara menyeluruh. Mulai dari memetakan proses bisnis dan menata data hingga pengembangan full-stack, saya mengubah masalah menjadi produk yang benar-benar digunakan.',
+				'Saya menjembatani kebutuhan bisnis dan teknologi — menganalisis kebutuhan, merancang sistem, dan membangun solusi secara menyeluruh. Mulai dari memetakan proses bisnis dan menata data hingga pengembangan full-stack, saya mengubah masalah menjadi produk yang benar-benar digunakan.',
 			ctaProjects: 'Lihat Project',
 			ctaCv: 'Unduh CV',
 			metaProject: 'Project',
 			metaExperience: 'Pengalaman',
 			metaCertificate: 'Sertifikat',
-			badgeWeb: 'Web Developer',
-			badgeData: 'Data Enthusiast',
-			badgeFullstack: 'Full Stack',
+			badgeSystem: 'System Analyst',
+			badgeData: 'Data Analyst',
+			badgeFullstack: 'Full-Stack Developer',
 			currently: 'Saat ini',
 			status: 'Terbuka untuk Kerja',
 			online: 'Online',
@@ -499,7 +509,7 @@ const I18N = {
 		contact: {
 			eyebrow: '06 - Kontak',
 			titleHtml: 'Mari membangun sesuatu yang <em>bermakna</em>.',
-			lead: 'Jangan ragu menghubungi saya lewat email atau kanal di bawah. Saya senang berdiskusi tentang magang, peluang kerja penuh waktu, atau kolaborasi di bidang sistem, data, dan teknologi.',
+			lead: 'Jangan ragu menghubungi saya lewat email atau kanal di bawah — saya senang berdiskusi tentang magang, peluang kerja penuh waktu, atau kolaborasi di bidang sistem, data, dan teknologi.',
 		},
 		footer: {
 			tagline: 'Dibuat dengan sepenuh hati.',
