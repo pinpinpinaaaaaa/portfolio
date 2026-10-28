@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Devina Dewi - Business &amp; Technology | Systems, Data &amp; Development</title>
+		<title>Devina Dewi — Business &amp; Technology | Systems, Data &amp; Development</title>
 		<meta
 			name="description"
 			content="Informatics Engineering graduate bridging business, data, and technology. Experienced in requirement analysis, system design, data structuring, and full-stack development."
@@ -661,8 +661,16 @@
 			}
 			.skills-grid {
 				display: grid;
-				grid-template-columns: 1fr 1fr;
-				gap: clamp(40px, 5vw, 80px);
+				grid-template-columns: repeat(3, 1fr);
+				gap: clamp(32px, 4vw, 56px);
+			}
+			@media (max-width: 1180px) {
+				.skills-grid {
+					grid-template-columns: 1fr 1fr;
+				}
+				.skills-grid .skill-group:nth-child(3) {
+					grid-column: 1 / -1;
+				}
 			}
 			.skill-group-head {
 				display: flex;
@@ -711,9 +719,11 @@
 			}
 			.filter {
 				display: flex;
+				flex-wrap: wrap;
 				gap: 8px;
 			}
 			.chip {
+				white-space: nowrap;
 				padding: 10px 18px;
 				border: 1px solid var(--line);
 				border-radius: var(--radius-pill);
@@ -1278,6 +1288,9 @@
 				.skills-grid {
 					grid-template-columns: 1fr;
 				}
+				.skills-grid .skill-group:nth-child(3) {
+					grid-column: auto;
+				}
 				.hero-copy {
 					order: 2;
 				}
@@ -1413,7 +1426,7 @@
 						</h1>
 						<div class="hero-roles" id="heroRoles"></div>
 						<p class="hero-sub" data-i18n="hero.subtitle">
-							I bridge business needs and technology - analyzing requirements, designing systems, and building solutions end-to-end. From mapping business processes and structuring data to full-stack development, I turn problems into working products that people actually use.
+							I bridge business needs and technology — analyzing requirements, designing systems, and building solutions end-to-end. From mapping business processes and structuring data to full-stack development, I turn problems into working products that people actually use.
 						</p>
 						<div class="hero-actions">
 							<a href="#projects" class="btn-primary" data-i18n="hero.ctaProjects">View Projects</a>
@@ -1511,7 +1524,7 @@
 						</h2>
 					</div>
 					<p class="lead contact-lead" data-i18n="contact.lead">
-						Feel free to reach out by email or through the channels below. I'm happy to talk about internships, full-time opportunities, or collaboration in systems, data, and technology.
+						Feel free to reach out by email or through the channels below — I'm happy to talk about internships, full-time opportunities, or collaboration in systems, data, and technology.
 					</p>
 					<ul class="contact-list" id="contactList"></ul>
 				</div>
@@ -1671,7 +1684,8 @@
 				const nCert = (D.certifications || []).length;
 				const nSkill =
 					((D.skills && D.skills.web) || []).length +
-					((D.skills && D.skills.data) || []).length;
+					((D.skills && D.skills.data) || []).length +
+					((D.skills && D.skills.system) || []).length;
 
 				const cvBtn = $('downloadCv');
 				if (cvBtn) {
@@ -1703,9 +1717,9 @@
 					set(
 						'heroBadges',
 						[
-							['icon-code', s.hero.badgeWeb],
+							['icon-layers', s.hero.badgeSystem],
 							['icon-chart', s.hero.badgeData],
-							['icon-layers', s.hero.badgeFullstack],
+							['icon-code', s.hero.badgeFullstack],
 						]
 							.map(
 								([icon, label]) =>
@@ -1743,6 +1757,7 @@
 						[
 							{ title: t(sk.webTitle) || 'Web Development', note: t(sk.webNote) || '', list: sk.web },
 							{ title: t(sk.dataTitle) || 'Data & Analytics', note: t(sk.dataNote) || '', list: sk.data },
+							{ title: t(sk.systemTitle) || 'System Analysis & Design', note: t(sk.systemNote) || '', list: sk.system },
 						]
 							.map(
 								(b) => `<div class="skill-group">
