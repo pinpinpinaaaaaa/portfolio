@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Portfolio - Web Developer &amp; Data Enthusiast</title>
+		<title>Devina Dewi - Business &amp; Technology | Systems, Data &amp; Development</title>
 		<meta
 			name="description"
-			content="Personal portfolio - Web Developer &amp; Full-Stack Engineer with an interest in data analytics. Showcasing web development projects, data work, and professional certifications."
+			content="Informatics Engineering graduate bridging business, data, and technology. Experienced in requirement analysis, system design, data structuring, and full-stack development."
 		/>
 		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 		<link rel="alternate icon" href="favicon.ico" />
@@ -1413,7 +1413,7 @@
 						</h1>
 						<div class="hero-roles" id="heroRoles"></div>
 						<p class="hero-sub" data-i18n="hero.subtitle">
-							I analyze business needs, design systems, and build digital products. From requirement analysis and data structuring to full-stack development, I turn problems into working solutions.
+							I bridge business needs and technology - analyzing requirements, designing systems, and building solutions end-to-end. From mapping business processes and structuring data to full-stack development, I turn problems into working products that people actually use.
 						</p>
 						<div class="hero-actions">
 							<a href="#projects" class="btn-primary" data-i18n="hero.ctaProjects">View Projects</a>
@@ -1448,11 +1448,11 @@
 				<div class="container about-grid">
 					<div class="about-copy">
 						<h2 data-i18n-html="about.titleHtml">
-							Focused on <em>web engineering</em>,<br />curious about
-							<em>data</em>.
+							Analyzing <em>business needs</em>,<br />designing <em>systems</em>, building <em>solutions</em>.
 						</h2>
 						<p class="lead" id="aboutLead"></p>
 						<p id="aboutText"></p>
+						<p id="aboutClosing"></p>
 						<div class="tag-row" id="aboutTags"></div>
 					</div>
 					<div class="about-stats" id="aboutStats"></div>
@@ -1474,8 +1474,9 @@
 						<h2 data-i18n-html="projects.titleHtml">Selected <em>work</em>.</h2>
 						<div class="filter" id="filter">
 							<button class="chip active" data-filter="all" data-i18n="projects.filterAll">All</button>
-							<button class="chip" data-filter="web" data-i18n="projects.filterWeb">Web Dev</button>
-							<button class="chip" data-filter="data" data-i18n="projects.filterData">Data</button>
+							<button class="chip" data-filter="system" data-i18n="projects.filterSystem">System Design</button>
+							<button class="chip" data-filter="data" data-i18n="projects.filterData">Data &amp; Analytics</button>
+							<button class="chip" data-filter="web" data-i18n="projects.filterWeb">Web Development</button>
 						</div>
 					</div>
 					<div class="work-list" id="workList"></div>
@@ -1510,7 +1511,7 @@
 						</h2>
 					</div>
 					<p class="lead contact-lead" data-i18n="contact.lead">
-						Feel free to reach out by email or through the social channels below - I'm happy to talk about collaboration, freelance work, or full-time opportunities in web development &amp; engineering.
+						Feel free to reach out by email or through the channels below. I'm happy to talk about internships, full-time opportunities, or collaboration in systems, data, and technology.
 					</p>
 					<ul class="contact-list" id="contactList"></ul>
 				</div>
@@ -1715,6 +1716,7 @@
 
 					set('aboutLead', esc(t(D.profile.aboutLead)));
 					set('aboutText', esc(t(D.profile.aboutText)));
+					set('aboutClosing', esc(t(D.profile.aboutClosing)));
 					set(
 						'aboutTags',
 						(t(D.profile.tags) || []).map((tag) => `<span>${esc(tag)}</span>`).join(''),
@@ -1760,7 +1762,7 @@
 						'workList',
 						(D.projects || [])
 							.map((p, i) => {
-								const cat = p.category === 'data' ? 'data' : 'web';
+								const cat = ['system', 'data'].includes(p.category) ? p.category : 'web';
 								const stack = (p.stack || [])
 									.map((tech) => `<span>${esc(tech)}</span>`)
 									.join('');
