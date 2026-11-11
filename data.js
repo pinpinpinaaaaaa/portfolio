@@ -297,7 +297,7 @@ const PORTFOLIO_DATA = {
 			},
 			stack: ['WordPress', 'Elementor', 'HTML', 'CSS', 'PHP'],
 			images: ['assets/img/redesign-1.jpg', 'assets/img/redesign-2.jpg'],
-			year: '2025',
+			year: '2026',
 			github: '',
 		},
 		{
