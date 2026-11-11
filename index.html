@@ -1486,7 +1486,8 @@
 					<div class="section-head">
 						<h2 data-i18n-html="projects.titleHtml">Selected <em>work</em>.</h2>
 						<div class="filter" id="filter">
-							<button class="chip active" data-filter="all" data-i18n="projects.filterAll">All</button>
+							<button class="chip active" data-filter="year" id="yearChip"></button>
+							<button class="chip" data-filter="all" data-i18n="projects.filterAll">All</button>
 							<button class="chip" data-filter="system" data-i18n="projects.filterSystem">System Design</button>
 							<button class="chip" data-filter="data" data-i18n="projects.filterData">Data &amp; Analytics</button>
 							<button class="chip" data-filter="web" data-i18n="projects.filterWeb">Web Development</button>
@@ -1789,7 +1790,7 @@
 								const thumbImg = thumb
 									? `<img src="${esc(thumb)}" alt="${esc(p.title)}" loading="lazy" onerror="this.parentElement.classList.add('is-empty');this.remove()" />`
 									: '';
-								return `<article class="work-panel" data-cat="${cat}" data-index="${i}">
+								return `<article class="work-panel" data-cat="${cat}" data-year="${esc(p.year || '')}" data-index="${i}">
 									<div class="work-media" data-open data-fallback="${initial}">${thumbImg}</div>
 									<div class="work-info">
 										<div class="work-meta"><span>${esc(p.year || '')}</span><span>${esc(t(p.tag))}</span></div>
@@ -1962,12 +1963,25 @@
 				window.addEventListener('resize', spy);
 				setTimeout(spy, 100);
 
+				// current year if any project has it, otherwise the latest project year
+				function featuredYear() {
+					const now = String(new Date().getFullYear());
+					const years = (D.projects || []).map((p) => String(p.year || ''));
+					if (years.some((y) => y.includes(now))) return now;
+					const found = years.join(' ').match(/\d{4}/g);
+					return found ? String(Math.max(...found.map(Number))) : now;
+				}
+
 				function applyFilter() {
+					const year = featuredYear();
+					$('yearChip').textContent = year;
 					const active = document.querySelector('.chip.active');
 					const f = active ? active.dataset.filter : 'all';
 					let shown = 0;
 					document.querySelectorAll('.work-panel').forEach((p) => {
-						const visible = f === 'all' || p.dataset.cat.split(' ').includes(f);
+						const visible =
+							f === 'all' ||
+							(f === 'year' ? p.dataset.year.includes(year) : p.dataset.cat.split(' ').includes(f));
 						p.style.display = visible ? '' : 'none';
 						// alternate left/right among visible panels only
 						p.classList.toggle('is-flip', visible && shown++ % 2 === 1);
