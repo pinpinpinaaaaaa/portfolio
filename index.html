@@ -1777,7 +1777,7 @@
 						'workList',
 						(D.projects || [])
 							.map((p, i) => {
-								const cat = ['system', 'data'].includes(p.category) ? p.category : 'web';
+								const cat = [].concat(p.category || 'web').filter((c) => ['system', 'data', 'web'].includes(c)).join(' ') || 'web';
 								const stack = (p.stack || [])
 									.map((tech) => `<span>${esc(tech)}</span>`)
 									.join('');
@@ -1968,7 +1968,7 @@
 						const f = c.dataset.filter;
 						document
 							.querySelectorAll('.work-panel')
-							.forEach((p) => (p.style.display = f !== 'all' && p.dataset.cat !== f ? 'none' : ''));
+							.forEach((p) => (p.style.display = f !== 'all' && !p.dataset.cat.split(' ').includes(f) ? 'none' : ''));
 					}),
 				);
 
