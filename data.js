@@ -10,8 +10,8 @@ const PORTFOLIO_DATA = {
 			id: 'Saya lulusan Teknik Informatika yang senang bekerja di persimpangan antara bisnis dan teknologi. Saya tidak sekadar membangun sistem — saya mulai dengan memahami masalah sebenarnya: menggali kebutuhan, memetakan proses, dan menata data sebelum merancang solusi.',
 		},
 		aboutText: {
-			en: 'During my internship, I took a manual, fragmented process and turned it into a working digital system — owning everything from requirement analysis and database design to development and user validation. I hold a BNSP Data Analyst certification and work comfortably across data analysis, system design, and full-stack development.',
-			id: 'Selama magang, saya mengubah proses manual yang tersebar menjadi sistem digital yang berfungsi — menangani semuanya dari analisis kebutuhan dan desain database hingga pengembangan dan validasi pengguna. Saya memegang sertifikasi BNSP Data Analyst dan terbiasa bekerja lintas bidang: analisis data, desain sistem, dan pengembangan full-stack.',
+			en: 'During my internship, I took a manual, fragmented process and turned it into a working digital system — owning everything from requirement analysis and database design to development and user validation. I hold the IBM Systems Analyst Professional Certificate and a BNSP Data Analyst certification and work comfortably across data analysis, system design, and full-stack development.',
+			id: 'Selama magang, saya mengubah proses manual yang tersebar menjadi sistem digital yang berfungsi — menangani semuanya dari analisis kebutuhan dan desain database hingga pengembangan dan validasi pengguna. Saya memegang IBM Systems Analyst Professional Certificate dan sertifikasi BNSP Data Analyst dan terbiasa bekerja lintas bidang: analisis data, desain sistem, dan pengembangan full-stack.',
 		},
 		aboutClosing: {
 			en: "I'm detail-oriented, a fast learner, and I care about solutions that actually fit what people need.",
@@ -178,7 +178,7 @@ const PORTFOLIO_DATA = {
 				id: 'Meredesain dan membangun ulang website klien, memigrasikan dari halaman hand-code ke WordPress yang mudah dirawat.',
 			},
 			detail: {
-				en: 'Audited an existing hand-coded client website, then redesigned the UI/UX in Figma to modernize the layout and improve usability. The site was rebuilt on WordPress using Elementor, with all content and page structure migrated over while keeping the new design responsive across devices. The result is a site the client\'s non-technical team can update on their own without touching code.',
+				en: "Audited an existing hand-coded client website, then redesigned the UI/UX in Figma to modernize the layout and improve usability. The site was rebuilt on WordPress using Elementor, with all content and page structure migrated over while keeping the new design responsive across devices. The result is a site the client's non-technical team can update on their own without touching code.",
 				id: 'Melakukan audit terhadap website klien yang sebelumnya dibangun secara hand-code, kemudian meredesain UI/UX di Figma untuk memperbarui tampilan dan meningkatkan kenyamanan penggunaan. Website dibangun ulang di WordPress menggunakan Elementor, dengan seluruh konten dan struktur halaman dimigrasikan sambil memastikan desain baru tetap responsif di berbagai perangkat. Hasilnya adalah website yang bisa diperbarui sendiri oleh tim non-teknis klien tanpa perlu koding.',
 			},
 			highlights: {
@@ -266,7 +266,7 @@ const PORTFOLIO_DATA = {
 				'assets/img/asset-3.jpg',
 			],
 			year: '2025',
-			github: '',
+			github: 'https://github.com/pinpinpinaaaaaa/manajemen-aset-case-study',
 		},
 		{
 			title: 'AI Proposal Generator',
@@ -297,11 +297,51 @@ const PORTFOLIO_DATA = {
 			stack: ['Python', 'Multi-Agent AI'],
 			images: ['assets/img/ai-proposal-1.jpg', 'assets/img/ai-proposal-2.jpg'],
 			year: '2026',
-			github: '',
+			github: 'https://github.com/pinpinpinaaaaaa/proposal-ai-case-study',
+		},
+		{
+			title: 'Digital Loan Pre-Approval — BA Case Study',
+			category: 'system',
+			tag: { en: 'Business Analysis', id: 'Analisis Bisnis' },
+			desc: {
+				en: 'An end-to-end business & systems analysis case study for an automated digital loan pre-approval and onboarding system (MVP).',
+				id: 'Studi kasus analisis bisnis & sistem end-to-end untuk sistem pra-persetujuan dan onboarding pinjaman digital otomatis (MVP).',
+			},
+			detail: {
+				en: 'A capstone case study (fictional scenario) covering the full business-analysis lifecycle: discovery & requirements (FR/NFR, MoSCoW, user stories with acceptance criteria), to-be process modeling (BPMN), business rules, data entity modeling, KPIs & dashboard design, Gherkin test cases & UAT, deployment readiness, and stakeholder communication. Every artifact is traceable from user story to business rule to test case. Produced as the capstone for the IBM Systems Analyst Professional Certificate.',
+				id: 'Studi kasus capstone (skenario fiktif) yang mencakup seluruh siklus analisis bisnis: discovery & kebutuhan (FR/NFR, MoSCoW, user story dengan acceptance criteria), pemodelan proses to-be (BPMN), business rules, pemodelan entitas data, KPI & desain dashboard, test case Gherkin & UAT, kesiapan deployment, serta komunikasi stakeholder. Setiap artefak dapat ditelusuri dari user story ke business rule hingga test case. Dibuat sebagai capstone IBM Systems Analyst Professional Certificate.',
+			},
+			highlights: {
+				en: [
+					'As-Is/To-Be process modeling (BPMN) with swimlanes',
+					'Requirements: FR/NFR, MoSCoW, user stories + acceptance criteria',
+					'Business rules, data entity model & KPI dashboard design',
+					'Gherkin test cases, UAT plan & deployment readiness',
+					'Full traceability: user story → business rule → test case',
+				],
+				id: [
+					'Pemodelan proses As-Is/To-Be (BPMN) dengan swimlane',
+					'Kebutuhan: FR/NFR, MoSCoW, user story + acceptance criteria',
+					'Business rules, model entitas data & desain dashboard KPI',
+					'Test case Gherkin, rencana UAT & kesiapan deployment',
+					'Ketertelusuran penuh: user story → business rule → test case',
+				],
+			},
+			stack: ['BPMN', 'SQL', 'Power BI', 'Jira', 'Confluence'],
+			images: ['assets/img/loan-ba-1.jpg', 'assets/img/loan-ba-2.jpg'],
+			year: '2026',
+			github:
+				'https://github.com/pinpinpinaaaaaa/digital-loan-onboarding-case-study',
 		},
 	],
 
 	certifications: [
+		{
+			title: 'IBM Systems Analyst Professional Certificate',
+			issuer: 'IBM — Coursera',
+			year: '2026',
+			url: 'https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fwww.coursera.org%2Faccount%2Faccomplishments%2Fprofessional-cert%2Fcertificate%2F8XIXB6ZE50L7&urlhash=3uY-&mt=5h-j7Eepsf7bgDdMtbJkMsw1XPDe46AiIw3wHDamlhmIr-6jDMHleqnzClv4BewTXzOeyB1mF5sh69aqKQi2qYhilcyGjdCkBELytgFbLwKdxrxU3-Yws2vj7nUEMRazsEmuTF_7ML1NJaUDJR4Vao8TGJrxmK_zVHJNHGCkpy5ZwBerRdduRvYW01LB&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bn%2F2vg%2B6%2BScmAses6BnsAOw%3D%3D',
+		},
 		{
 			title: 'Sertifikasi BNSP - Data Analyst',
 			issuer: 'Badan Nasional Sertifikasi Profesi (BNSP)',
@@ -343,7 +383,10 @@ const PORTFOLIO_DATA = {
 			{ name: 'Python', level: 70 },
 			{ name: 'Machine Learning', level: 60 },
 		],
-		systemTitle: { en: 'System Analysis & Design', id: 'Analisis & Desain Sistem' },
+		systemTitle: {
+			en: 'System Analysis & Design',
+			id: 'Analisis & Desain Sistem',
+		},
 		systemNote: { en: 'Proficient', id: 'Mahir' },
 		system: [
 			{ name: 'Requirement Gathering', level: 85 },
@@ -360,7 +403,8 @@ const I18N = {
 	en: {
 		loader: 'Loading Portfolio',
 		meta: {
-			title: 'Devina Dewi — Business & Technology | Systems, Data & Development',
+			title:
+				'Devina Dewi — Business & Technology | Systems, Data & Development',
 			description:
 				'Informatics Engineering graduate bridging business, data, and technology. Experienced in requirement analysis, system design, data structuring, and full-stack development.',
 		},
@@ -443,7 +487,8 @@ const I18N = {
 	id: {
 		loader: 'Memuat Portofolio',
 		meta: {
-			title: 'Devina Dewi — Business & Technology | Systems, Data & Development',
+			title:
+				'Devina Dewi — Business & Technology | Systems, Data & Development',
 			description:
 				'Lulusan Teknik Informatika yang menjembatani bisnis, data, dan teknologi. Berpengalaman dalam analisis kebutuhan, desain sistem, penataan data, dan pengembangan full-stack.',
 		},
