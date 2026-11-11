@@ -749,7 +749,7 @@
 				align-items: center;
 				gap: clamp(32px, 5vw, 70px);
 			}
-			.work-panel:nth-of-type(even) {
+			.work-panel.is-flip {
 				flex-direction: row-reverse;
 			}
 			.work-media {
@@ -1300,7 +1300,7 @@
 					max-width: 280px;
 				}
 				.work-panel,
-				.work-panel:nth-of-type(even) {
+				.work-panel.is-flip {
 					flex-direction: column;
 					align-items: stretch;
 				}
@@ -1805,6 +1805,7 @@
 							})
 							.join(''),
 					);
+					applyFilter();
 
 					set(
 						'certList',
@@ -1961,14 +1962,23 @@
 				window.addEventListener('resize', spy);
 				setTimeout(spy, 100);
 
+				function applyFilter() {
+					const active = document.querySelector('.chip.active');
+					const f = active ? active.dataset.filter : 'all';
+					let shown = 0;
+					document.querySelectorAll('.work-panel').forEach((p) => {
+						const visible = f === 'all' || p.dataset.cat.split(' ').includes(f);
+						p.style.display = visible ? '' : 'none';
+						// alternate left/right among visible panels only
+						p.classList.toggle('is-flip', visible && shown++ % 2 === 1);
+					});
+				}
+
 				document.querySelectorAll('.chip').forEach((c) =>
 					c.addEventListener('click', () => {
 						document.querySelectorAll('.chip').forEach((x) => x.classList.remove('active'));
 						c.classList.add('active');
-						const f = c.dataset.filter;
-						document
-							.querySelectorAll('.work-panel')
-							.forEach((p) => (p.style.display = f !== 'all' && !p.dataset.cat.split(' ').includes(f) ? 'none' : ''));
+						applyFilter();
 					}),
 				);
 
