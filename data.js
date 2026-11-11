@@ -328,7 +328,7 @@ const PORTFOLIO_DATA = {
 					'Ketertelusuran penuh: user story → business rule → test case',
 				],
 			},
-			stack: ['BPMN', 'SQL', 'Power BI', 'Jira', 'Confluence'],
+			stack: ['BPMN', 'SQL', 'IBM Cognos', 'Jira', 'Confluence'],
 			images: [
 				'assets/img/loan-ba-1.png',
 				'assets/img/loan-ba-2.png',
