@@ -170,37 +170,6 @@ const PORTFOLIO_DATA = {
 			github: '',
 		},
 		{
-			title: 'Website Redesign & WordPress Migration',
-			category: 'web',
-			tag: { en: 'Redesign & Migration', id: 'Redesign & Migrasi' },
-			desc: {
-				en: 'Redesigned and rebuilt a client website, migrating it from hand-coded pages to a maintainable WordPress site.',
-				id: 'Meredesain dan membangun ulang website klien, memigrasikan dari halaman hand-code ke WordPress yang mudah dirawat.',
-			},
-			detail: {
-				en: "Audited an existing hand-coded client website, then redesigned the UI/UX in Figma to modernize the layout and improve usability. The site was rebuilt on WordPress using Elementor, with all content and page structure migrated over while keeping the new design responsive across devices. The result is a site the client's non-technical team can update on their own without touching code.",
-				id: 'Melakukan audit terhadap website klien yang sebelumnya dibangun secara hand-code, kemudian meredesain UI/UX di Figma untuk memperbarui tampilan dan meningkatkan kenyamanan penggunaan. Website dibangun ulang di WordPress menggunakan Elementor, dengan seluruh konten dan struktur halaman dimigrasikan sambil memastikan desain baru tetap responsif di berbagai perangkat. Hasilnya adalah website yang bisa diperbarui sendiri oleh tim non-teknis klien tanpa perlu koding.',
-			},
-			highlights: {
-				en: [
-					'Migrated a custom-coded website to WordPress',
-					'Rebuilt the UI from Figma designs with Elementor',
-					'Improved responsiveness and page structure',
-					'Enabled content updates without coding',
-				],
-				id: [
-					'Migrasi website hand-code ke WordPress',
-					'Bangun ulang UI dari desain Figma via Elementor',
-					'Tingkatkan responsivitas & struktur halaman',
-					'Update konten tanpa perlu koding',
-				],
-			},
-			stack: ['WordPress', 'Elementor', 'HTML', 'CSS', 'PHP'],
-			images: ['assets/img/redesign-1.jpg', 'assets/img/redesign-2.jpg'],
-			year: '2025',
-			github: '',
-		},
-		{
 			title: 'WebJadiin',
 			category: 'web',
 			tag: { en: 'Service Platform', id: 'Platform Jasa' },
@@ -235,7 +204,7 @@ const PORTFOLIO_DATA = {
 		},
 		{
 			title: 'Asset Management System',
-			category: 'system',
+			category: ['system', 'web'],
 			tag: { en: 'Information System', id: 'Sistem Informasi' },
 			desc: {
 				en: 'A digital asset & inventory management system that improves the efficiency of asset tracking and monitoring.',
@@ -270,7 +239,7 @@ const PORTFOLIO_DATA = {
 		},
 		{
 			title: 'AI Proposal Generator',
-			category: 'data',
+			category: ['system', 'web'],
 			tag: { en: 'AI / Automation', id: 'AI / Otomasi' },
 			desc: {
 				en: 'A multi-agent AI project proposal generator - covering requirement analysis, cost estimation, and automatic document drafting.',
@@ -298,6 +267,38 @@ const PORTFOLIO_DATA = {
 			images: ['assets/img/ai-proposal-1.jpg', 'assets/img/ai-proposal-2.jpg'],
 			year: '2026',
 			github: 'https://github.com/pinpinpinaaaaaa/proposal-ai-case-study',
+		},
+
+		{
+			title: 'Website Redesign & WordPress Migration',
+			category: 'web',
+			tag: { en: 'Redesign & Migration', id: 'Redesign & Migrasi' },
+			desc: {
+				en: 'Redesigned and rebuilt a client website, migrating it from hand-coded pages to a maintainable WordPress site.',
+				id: 'Meredesain dan membangun ulang website klien, memigrasikan dari halaman hand-code ke WordPress yang mudah dirawat.',
+			},
+			detail: {
+				en: "Audited an existing hand-coded client website, then redesigned the UI/UX in Figma to modernize the layout and improve usability. The site was rebuilt on WordPress using Elementor, with all content and page structure migrated over while keeping the new design responsive across devices. The result is a site the client's non-technical team can update on their own without touching code.",
+				id: 'Melakukan audit terhadap website klien yang sebelumnya dibangun secara hand-code, kemudian meredesain UI/UX di Figma untuk memperbarui tampilan dan meningkatkan kenyamanan penggunaan. Website dibangun ulang di WordPress menggunakan Elementor, dengan seluruh konten dan struktur halaman dimigrasikan sambil memastikan desain baru tetap responsif di berbagai perangkat. Hasilnya adalah website yang bisa diperbarui sendiri oleh tim non-teknis klien tanpa perlu koding.',
+			},
+			highlights: {
+				en: [
+					'Migrated a custom-coded website to WordPress',
+					'Rebuilt the UI from Figma designs with Elementor',
+					'Improved responsiveness and page structure',
+					'Enabled content updates without coding',
+				],
+				id: [
+					'Migrasi website hand-code ke WordPress',
+					'Bangun ulang UI dari desain Figma via Elementor',
+					'Tingkatkan responsivitas & struktur halaman',
+					'Update konten tanpa perlu koding',
+				],
+			},
+			stack: ['WordPress', 'Elementor', 'HTML', 'CSS', 'PHP'],
+			images: ['assets/img/redesign-1.jpg', 'assets/img/redesign-2.jpg'],
+			year: '2025',
+			github: '',
 		},
 		{
 			title: 'Digital Loan Pre-Approval — BA Case Study',
@@ -328,7 +329,11 @@ const PORTFOLIO_DATA = {
 				],
 			},
 			stack: ['BPMN', 'SQL', 'Power BI', 'Jira', 'Confluence'],
-			images: ['assets/img/loan-ba-1.jpg', 'assets/img/loan-ba-2.jpg'],
+			images: [
+				'assets/img/loan-ba-1.png',
+				'assets/img/loan-ba-2.png',
+				'assets/img/loan-ba-3.png',
+			],
 			year: '2026',
 			github:
 				'https://github.com/pinpinpinaaaaaa/digital-loan-onboarding-case-study',
